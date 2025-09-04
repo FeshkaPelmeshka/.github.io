@@ -1,178 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TradeDocAI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TradeDocAI – Home</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f9fafc;
-      color: #222;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
     }
     header {
-      background: #ffffff; /* Light background for dark logo */
-      color: #002855;
-      padding: 1rem;
+      background: url('background.jpg') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      border-bottom: 4px solid #004080;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 40, 85, 0.6);
+      z-index: 1;
+    }
+    header img, header h1, header p {
+      position: relative;
+      z-index: 2;
     }
     header img {
-      max-height: 80px;
+      max-height: 100px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0.5rem 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
     }
     nav {
       background: #004080;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
     }
     nav a {
       color: #fff;
-      padding: 1rem;
+      padding: 1rem 1.5rem;
       text-decoration: none;
       transition: background 0.3s;
     }
     nav a:hover {
       background: #0059b3;
     }
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
+    section, footer {
+      padding: 2rem;
+      max-width: 900px;
       margin: auto;
-    }
-    h1, h2 {
-      color: #002855;
-    }
-    .tagline {
-      font-size: 1.2rem;
-      font-style: italic;
-      margin-top: 0.5rem;
-      color: #555;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 500px;
-    }
-    form input, form textarea {
-      margin: 0.5rem 0;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      background: #004080;
-      color: #fff;
-      border: none;
-      padding: 0.8rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background: #0059b3;
+      background: #f9fafc;
+      color: #222;
     }
     footer {
       background: #002855;
       color: #fff;
       text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
     }
-    footer img {
-      max-height: 50px;
-      margin-bottom: 1rem;
-    }
+    footer img { max-height: 40px; display: block; margin: auto; }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <img src="logo-dark.png" alt="TradeDocAI Logo" />
-    <h1>TradeDocAI</h1>
-    <p class="tagline">AI-powered Trade Document Intelligence Platform</p>
+    <img src="logo-dark.png" alt="TradeDocAI Logo">
+    <h1>Digitising Global Trade</h1>
+    <p>Make trade faster, safer, and smarter with AI.</p>
   </header>
-
-  <!-- Navigation -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
   </nav>
-
-  <!-- Home Section -->
-  <section id="home">
+  <section>
     <h2>Welcome to TradeDocAI</h2>
-    <p>
-      Making international trade faster, safer, and more inclusive through automation.  
-      Our AI transforms unstructured trade paperwork into structured, validated digital data.
-    </p>
+    <p>Transforming unstructured trade documents into actionable data with precision.</p>
   </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p><strong>Vision:</strong> Make international trade faster, safer, and more inclusive through automation.</p>
-    <p><strong>Mission:</strong> Transform unstructured trade paperwork into structured, validated digital data using AI.</p>
-    <h3>Our Team</h3>
-    <ul>
-      <li><strong>Natalia Feshakova</strong> – CEO/CPO/CTO</li>
-      <li><strong>Julia Kozina</strong> – COO/CDO</li>
-      <li><strong>Yasmina Izrar</strong> – CRO</li>
-    </ul>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>OCR & Classification</h3>
-        <p>AI-powered OCR for scanned documents and smart classification of invoices, bills of lading, packing lists, and more.</p>
-      </div>
-      <div class="card">
-        <h3>Data Extraction</h3>
-        <p>Extract and structure key trade data with cross-document consistency checks and standards mapping.</p>
-      </div>
-      <div class="card">
-        <h3>Integration</h3>
-        <p>Seamless export to JSON, XML, or CSV, mapped to global standards, with Web, Mobile, and API access.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you. Reach out for partnerships, demos, or more info.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>Email: <a href="mailto:info@tradedoc.ai">info@tradedoc.ai</a></p>
-    <p>Phone: +65 1234 5678</p>
-    <p>Address: Singapore</p>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <img src="logo-white.png" alt="TradeDocAI Logo White" />
-    <p>© 2025 TradeDocAI. All rights reserved.</p>
+    <img src="logo-white.png" alt="TradeDocAI Logo (white)">
+    <p>© 2025 TradeDocAI. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
