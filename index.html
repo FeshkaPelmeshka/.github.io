@@ -70,12 +70,21 @@
       color: #fff;
       text-align: center;
     }
-    footer img { max-height: 40px; display: block; margin: auto; }
+    footer img { 
+      max-height: 40px; 
+      display: block; 
+      margin: auto; 
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo-dark.png" alt="TradeDocAI Logo">
+    <picture>
+      <!-- White version shows up in dark mode -->
+      <source srcset="logo-white-transparent.png" media="(prefers-color-scheme: dark)">
+      <!-- Default dark version -->
+      <img src="logo-dark-transparent.png" alt="TradeDocAI Logo">
+    </picture>
     <h1>Digitising Global Trade</h1>
     <p>Make trade faster, safer, and smarter with AI.</p>
   </header>
@@ -90,7 +99,7 @@
     <p>Transforming unstructured trade documents into actionable data with precision.</p>
   </section>
   <footer>
-    <img src="logo-white.png" alt="TradeDocAI Logo (white)">
+    <img src="logo-white-transparent.png" alt="TradeDocAI Logo (white)">
     <p>© 2025 TradeDocAI. All Rights Reserved.</p>
   </footer>
 </body>
