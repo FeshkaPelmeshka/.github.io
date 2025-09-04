@@ -1,135 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TradeDocAI – Home</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-    }
-
-    /* HEADER */
-    header {
-      background: url('background.jpg') center/cover no-repeat;
-      height: 80vh;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 40, 85, 0.6);
-      z-index: 1;
-    }
-    header .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 2;
-      max-height: 120px;   /* bigger logo */
-      width: auto;
-    }
-    header h1, header p {
-      position: relative;
-      z-index: 2;
-      margin: 0.5rem 0;
-    }
-    header h1 {
-      font-size: 3rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      font-style: italic;
-    }
-
-    /* NAV */
-    nav {
-      background: #004080;
-      display: flex;
-      justify-content: center;
-    }
-    nav a {
-      color: #fff;
-      padding: 1rem 1.5rem;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background: #0059b3;
-    }
-
-    /* CONTENT */
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background: #f9fafc;
-      color: #222;
-    }
-
     /* FOOTER */
     footer {
       background: #002855;
       color: #fff;
       display: flex;
-      align-items: center;
-      justify-content: flex-start; /* left-aligned */
-      gap: 1rem;
+      flex-direction: column;   /* stack logo and text vertically */
+      align-items: center;      /* center horizontally */
+      justify-content: center;  /* center vertically */
       padding: 1rem 2rem;
+      text-align: center;
     }
     footer img {
-      max-height: 80px;  /* bigger logo */
+      max-height: 80px;
       width: auto;
+      margin-bottom: 0.5rem;
     }
     footer p {
       margin: 0;
       font-size: 0.9rem;
     }
-
-    /* Responsive adjustment */
-    @media (max-width: 600px) {
-      header .logo {
-        max-height: 80px;
-      }
-      footer img {
-        max-height: 60px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <!-- Top-left logo -->
-    <img src="logo-white-transparent.png" alt="TradeDocAI Logo" class="logo">
-    <h1>Digitising Global Trade</h1>
-    <p>Make trade faster, safer, and smarter with AI.</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <section>
-    <h2>Welcome to TradeDocAI</h2>
-    <p>We transform unstructured trade-related paperwork into structured, validated, and standardised digital data</p>
-  </section>
-
-  <footer>
-    <!-- Bottom-center logo -->
-    <img src="logo-white-transparent.png" alt="TradeDocAI Logo (white)">
-    <p>© 2025 TradeDocAI. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
