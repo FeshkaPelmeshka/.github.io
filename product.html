@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +8,11 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: #222;
       background: #f9fafc;
+      color: #666; /* medium gray body text */
     }
 
-    /* NAV + HEADER */
+    /* HEADER */
     header {
       background: url('background.jpg') center/cover no-repeat;
       height: 50vh;
@@ -46,6 +45,8 @@
       max-height: 120px;
       width: auto;
     }
+
+    /* NAV */
     nav {
       background: #004080;
       display: flex;
@@ -66,25 +67,56 @@
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
+      text-align: center;
     }
     h2 {
       color: #002855;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    /* FEATURES LIST */
     ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
+      list-style: none; /* remove default bullets */
+      padding: 0;
+      margin: 1rem auto;
+      max-width: 600px;
+      text-align: left; /* keep text aligned for readability */
     }
     ul li {
-      margin-bottom: 0.5rem;
+      background: #fff;
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      font-size: 1rem;
     }
-    .process-img {
-      display: block;
+
+    /* HOW IT WORKS CARD */
+    .process-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+    .process-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .process-card img {
       max-width: 100%;
       height: auto;
-      margin: 2rem auto;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto;
     }
 
     /* FOOTER */
@@ -97,6 +129,19 @@
     footer p {
       margin: 0;
       font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header .logo {
+        max-height: 80px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      ul {
+        text-align: center; /* center text on small screens */
+      }
     }
   </style>
 </head>
@@ -133,7 +178,9 @@
   <!-- How It Works -->
   <section>
     <h2>How It Works</h2>
-    <img src="process.jpg" alt="How TradeDocAI Works" class="process-img">
+    <div class="process-card">
+      <img src="process.jpg" alt="How TradeDocAI Works">
+    </div>
   </section>
 
   <footer>
