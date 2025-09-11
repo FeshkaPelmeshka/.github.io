@@ -1,14 +1,198 @@
-...Same head, nav & footer...
-<section>
-  <h2>Contact Us</h2>
-  <form style="display:flex;flex-direction:column;max-width:500px;">
-    <input type="text" placeholder="Your Name" required style="margin:0.5rem 0;padding:0.5rem;">
-    <input type="email" placeholder="Your Email" required style="margin:0.5rem 0;padding:0.5rem;">
-    <textarea rows="4" placeholder="Your Message" required style="margin:0.5rem 0;padding:0.5rem;"></textarea>
-    <button type="submit" style="padding:0.7rem;background:#004080;color:#fff;border:none;border-radius:5px;">Send Message</button>
-  </form>
-  <p>Email: <a href="mailto:info@tradedoc.ai">info@tradedoc.ai</a></p>
-  <p>Phone: +65 1234 5678</p>
-  <p>Address: Singapore</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TradeDocAI – Contact Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafc;
+      color: #666; /* medium gray body text */
+    }
 
+    /* HEADER */
+    header {
+      background: url('background.jpg') center/cover no-repeat;
+      height: 50vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 40, 85, 0.6);
+      z-index: 1;
+    }
+    header h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 3rem;
+      margin: 0;
+    }
+    header .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+      max-height: 120px;
+      width: auto;
+    }
+
+    /* NAV */
+    nav {
+      background: #004080;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #0059b3;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    h2 {
+      color: #002855;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    /* FORM */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 1.5rem auto;
+    }
+    form input,
+    form textarea {
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 0.8rem;
+      background: #004080;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #0059b3;
+    }
+
+    /* MAP CARD */
+    .map-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 800px;
+      margin: 2rem auto;
+      overflow: hidden;
+    }
+    .map-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .map-card iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #002855;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header .logo {
+        max-height: 80px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo-white-transparent.png" alt="TradeDocAI Logo" class="logo">
+    <h1>Contact Us</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="product.html">Our Product</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Contact Section -->
+  <section>
+    <h2>Get in Touch</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p>Email: <a href="mailto:info@tradedoc.ai">info@tradedoc.ai</a></p>
+    <p><strong>Our Office:</strong> Singapore</p>
+  </section>
+
+  <!-- Map Card -->
+  <div class="map-card">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199493.24287743196!2d103.704164!3d1.352083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da112f8b6a3bb1%3A0x500f7acaedaa430!2sSingapore!5e0!3m2!1sen!2ssg!4v1694346198273!5m2!1sen!2ssg" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <footer>
+    <p>© 2025 TradeDocAI. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
