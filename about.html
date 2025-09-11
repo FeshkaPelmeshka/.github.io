@@ -8,11 +8,11 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: #222;
       background: #f9fafc;
+      color: #666; /* medium gray body text like index.html */
     }
 
-    /* NAV + HEADER */
+    /* HEADER */
     header {
       background: url('background.jpg') center/cover no-repeat;
       height: 50vh;
@@ -45,6 +45,8 @@
       max-height: 120px;
       width: auto;
     }
+
+    /* NAV */
     nav {
       background: #004080;
       display: flex;
@@ -62,27 +64,34 @@
 
     /* SECTIONS */
     section {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1rem;
+      text-align: center; /* center text like index.html */
     }
     h2 {
       color: #002855;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
-    /* TEAM */
+    /* TEAM STYLE (similar to intelligent features) */
     .team {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
     }
     .member {
       background: #fff;
-      border-radius: 10px;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .member:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
     .member img {
       width: 150px;
@@ -99,26 +108,16 @@
       color: #002855;
     }
     .member p {
-      font-size: 0.9rem;
-      line-height: 1.4;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0.5rem 0;
     }
     .member a {
       display: inline-block;
-      margin-top: 0.5rem;
+      margin-top: 0.8rem;
       color: #0059b3;
       text-decoration: none;
       font-weight: bold;
-    }
-
-    /* BIO TEXT */
-    .bio {
-      font-size: 0.85rem;
-      font-style: italic;
-      text-align: left;
-      margin-top: 0.5rem;
-    }
-    .bio p {
-      margin-bottom: 0.8rem;
     }
 
     /* FOOTER */
@@ -131,6 +130,16 @@
     footer p {
       margin: 0;
       font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header .logo {
+        max-height: 80px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
@@ -150,12 +159,10 @@
 
   <section>
     <h2>The Problem We Are Solving</h2>
-    <ul>
-      <li>80% of trade documents are still handled manually</li>
-      <li>Fragmented formats and no standardisation slow down processing</li>
-      <li>Manual workflows introduce delays, errors, and fraud risks</li>
-      <li>SMEs and mid-tier players lack access to digitisation tools used by top-tier banks</li>
-    </ul>
+    <p>80% of trade documents are still handled manually</p>
+    <p>Fragmented formats and no standardisation slow down processing</p>
+    <p>Manual workflows introduce delays, errors, and fraud risks</p>
+    <p>SMEs and mid-tier players lack access to digitisation tools used by top-tier banks</p>
     <p><strong>That is why we came up with a solution: TradeDocAI.</strong></p>
   </section>
 
@@ -168,12 +175,10 @@
         <img src="natalia.jpg" alt="Natalia Feshakova Headshot">
         <h4>Natalia Feshakova</h4>
         <p><strong>CEO / CPO / CTO</strong></p>
-        <div class="bio">
-          <p>I started my career as a full-stack developer and later transitioned into strategy and sales leadership roles after earning my MBA at INSEAD.</p>
-          <p>Over the past 13+ years, I have worked across banks, FinTechs, and SaaS startups, specializing in trade finance and digital transformation. I am ICC-certified in Trade Finance, with deep knowledge of trade processes and standards.</p>
-          <p>I spent 7+ years building and selling SaaS platforms for the trade finance industry, where I saw first-hand that the manual re-entry of data from paper documents into digital systems is one of the key blockers to adoption — a point frequently raised by senior bankers during product demos.</p>
-          <p>My combined expertise in product, strategy, trade finance, blockchain, and data privacy uniquely positions me to build an API-first, AI-powered Trade Document Intelligence Platform that solves this critical market need.</p>
-        </div>
+        <p>I started my career as a full-stack developer and later transitioned into strategy and sales leadership roles after earning my MBA at INSEAD.</p>
+        <p>Over the past 13+ years, I have worked across banks, FinTechs, and SaaS startups, specializing in trade finance and digital transformation. I am ICC-certified in Trade Finance, with deep knowledge of trade processes and standards.</p>
+        <p>I spent 7+ years building and selling SaaS platforms for the trade finance industry, where I saw first-hand that the manual re-entry of data from paper documents into digital systems is one of the key blockers to adoption — a point frequently raised by senior bankers during product demos.</p>
+        <p>My combined expertise in product, strategy, trade finance, blockchain, and data privacy uniquely positions me to build an API-first, AI-powered Trade Document Intelligence Platform that solves this critical market need.</p>
         <a href="https://www.linkedin.com/in/feshakov/" target="_blank">LinkedIn Profile</a>
       </div>
 
@@ -181,11 +186,9 @@
         <img src="julia.jpg" alt="Julia Kozina Headshot">
         <h4>Julia Kozina</h4>
         <p><strong>COO / CDO</strong></p>
-        <div class="bio">
-          <p>I am a strategy consultant and business analyst with an NUS MBA degree and 15+ years of international experience across the transport, logistics, and infrastructure sectors.</p>
-          <p>My career spans Europe, the Middle East, and Central and Southeast Asia, where I have helped both public and private organizations make smarter decisions by combining business insight, market intelligence, and data-driven analysis.</p>
-          <p>For our platform, I oversee strategic execution, drive operational excellence, and ensure alignment between product development and market needs. My goal is to ensure every element of the solution is both business-relevant and data-backed.</p>
-        </div>
+        <p>I am a strategy consultant and business analyst with an NUS MBA degree and 15+ years of international experience across the transport, logistics, and infrastructure sectors.</p>
+        <p>My career spans Europe, the Middle East, and Central and Southeast Asia, where I have helped both public and private organizations make smarter decisions by combining business insight, market intelligence, and data-driven analysis.</p>
+        <p>For our platform, I oversee strategic execution, drive operational excellence, and ensure alignment between product development and market needs. My goal is to ensure every element of the solution is both business-relevant and data-backed.</p>
         <a href="https://www.linkedin.com/in/juliakozina/" target="_blank">LinkedIn Profile</a>
       </div>
 
@@ -193,12 +196,10 @@
         <img src="yasmina.jpg" alt="Yasmina Izrar Headshot">
         <h4>Yasmina Izrar</h4>
         <p><strong>CRO</strong></p>
-        <div class="bio">
-          <p>I am a commercial and operational leader with over 15 years of experience in trade finance, having held senior roles across product, marketing, and business operations in Europe and Asia. I hold a Master's degree in Corporate Finance and an MBA in Audit and Risk Management.</p>
-          <p>My career began at Tinubu Square, a pioneer in digital credit risk and trade finance solutions, where I contributed to the launch of SaaS platforms for banks and insurers.</p>
-          <p>I later joined Coface, a global leader in trade credit insurance, where I currently serve as Regional Head of Commercial Back Office & Operations for Asia Pacific.</p>
-          <p>My goal is to bring execution discipline, ecosystem knowledge, and go-to-market focus — helping shape a platform built to solve real pain points across banks, corporates, insurers, and logistics providers.</p>
-        </div>
+        <p>I am a commercial and operational leader with over 15 years of experience in trade finance, having held senior roles across product, marketing, and business operations in Europe and Asia. I hold a Master's degree in Corporate Finance and an MBA in Audit and Risk Management.</p>
+        <p>My career began at Tinubu Square, a pioneer in digital credit risk and trade finance solutions, where I contributed to the launch of SaaS platforms for banks and insurers.</p>
+        <p>I later joined Coface, a global leader in trade credit insurance, where I currently serve as Regional Head of Commercial Back Office & Operations for Asia Pacific.</p>
+        <p>My goal is to bring execution discipline, ecosystem knowledge, and go-to-market focus — helping shape a platform built to solve real pain points across banks, corporates, insurers, and logistics providers.</p>
         <a href="https://www.linkedin.com/in/yasmina-izrar-6b427618/" target="_blank">LinkedIn Profile</a>
       </div>
     </div>
