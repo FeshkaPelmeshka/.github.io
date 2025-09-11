@@ -161,6 +161,39 @@
       color: #002855;
     }
 
+    /* LINKEDIN CARD */
+    .linkedin-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 800px;
+      margin: 3rem auto;
+      text-align: center;
+      color: #666;
+    }
+    .linkedin-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .linkedin-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #0a66c2; /* LinkedIn blue */
+      color: #fff;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .linkedin-card a:hover {
+      background: #004182;
+      transform: translateY(-3px);
+    }
+
     /* FOOTER */
     footer {
       background: #002855;
@@ -247,6 +280,17 @@
         <h3>Standards Mapping</h3>
         <p>Convert data into industry-standard formats (MLETR, ICC DSI, ISO 20022, GS1)</p>
       </div>
+    </div>
+  </section>
+
+  <!-- LinkedIn Latest Post -->
+  <section>
+    <h2>Latest from LinkedIn</h2>
+    <div class="linkedin-card">
+      <p>Check out our latest update on LinkedIn about AI in Trade & Supply Chain</p>
+      <a href="https://www.linkedin.com/posts/tradedocai_ml-supplychain-datascience-activity-7367512613708107776-nTr6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAha8xEBWn7VA68aoJsTAkru0YlOgEgiqVg" target="_blank">
+        View Post on LinkedIn
+      </a>
     </div>
   </section>
 
