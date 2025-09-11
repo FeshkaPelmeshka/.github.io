@@ -131,16 +131,19 @@
     }
 
     .feature-card .icon {
-      width: 40px;
-      height: 40px;
+      width: 60px;
+      height: 60px;
       margin: 0 auto 1rem;
+      background: #1e366d; /* dark blue square */
+      border-radius: 12px; /* soft angles */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .feature-card img {
-      width: 40px;
-      height: 40px;
-      display: block;
-      margin: 0 auto;
+      width: 32px;
+      height: 32px;
     }
 
     .feature-card svg {
@@ -220,8 +223,8 @@
     <div class="feature-grid">
       <div class="feature-card">
         <div class="icon">
-          <!-- PNG Icon for AI-Powered OCR -->
-          <img src="ai-ocr-icon.png" alt="AI OCR Icon">
+          <!-- AI OCR SVG Icon inside dark blue square -->
+          <img src="ai-ocr-icon.svg" alt="AI OCR Icon">
         </div>
         <h3>AI-Powered OCR</h3>
         <p>Extract and digitise data from trade documents with cutting-edge accuracy.</p>
